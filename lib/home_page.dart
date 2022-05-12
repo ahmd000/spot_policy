@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/src/size_extension.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_utils/src/extensions/internacionalization.dart';
-
-import 'DoctorInformation/doctor_information.dart';
-import 'PrivacyPages/privacy_and_policy_page.dart';
-import 'UsingSpotApp/using_spot_app.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -13,72 +9,367 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage>   with SingleTickerProviderStateMixin {
-  late TabController _tabController;
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    _tabController = TabController(length: 3, vsync: this);
-  }
-
-  @override
-  void dispose() {
-    // TODO: implement dispose
-    _tabController.dispose();
-    super.dispose();
-  }
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      body: Column(
+      body: ListView(
+        padding: EdgeInsets.symmetric(
+          horizontal: 20.sp,
+          vertical: 20.sp,
+        ),
         children: [
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-            child: TabBar(
-              labelColor: Color(0xFF4D7CFE),
-              labelStyle: TextStyle(
-                  fontSize: 12.sp, fontWeight: FontWeight.w700),
-              unselectedLabelStyle: TextStyle(
-                fontSize: 12.sp,
-              ),
-              indicatorColor: Colors.black,
-              controller: _tabController,
-              indicator: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-              ),
-              tabs: [
-                Tab(
-                    child: Text(
-                      "privacy".tr,
-                      textAlign: TextAlign.center,
-                    )),
-                Tab(
-                    child: Text(
-                      "how_use".tr,
-                      // 'Tasks Progress',
-                      textAlign: TextAlign.center,
-                    )),
-                Tab(
-                    child: Text(
-                      "terms_and_conditions".tr,
-                      // 'Tasks Done',
-                      textAlign: TextAlign.center,
-                    )),
-              ],
-            ),
+          SizedBox(
+            height: 20.h,
           ),
-          Expanded(
-            child: TabBarView(
-              controller: _tabController,
-              children: [
-                PrivacyAndPolicyPage(),
-                UsingSpotApp(),
-                DoctorInformation(),
-              ],
-            ),
+          Text(
+            "privacy_p1".tr,
+            textAlign: TextAlign.start,
+
+            style: TextStyle(fontSize: 20.sp, color: Colors.blue[700]),
+          ),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_privacy_p1".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text(
+            "privacy_ethics".tr,
+            textAlign: TextAlign.start,
+            style: TextStyle(fontSize: 20.sp, color: Colors.blue[700]),
+          ),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_privacy_p2".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_privacy_p3".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_privacy_p4".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_privacy_p5".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_privacy_p6".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_privacy_p7".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_privacy_p8".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_privacy_p9".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_privacy_p10".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text(
+            "terms_and_conditions".tr,
+            textAlign: TextAlign.start,
+            style: TextStyle(fontSize: 20.sp, color: Colors.blue[700]),
+          ),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_conditions_p1".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_conditions_p2".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_conditions_p3".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_conditions_p4".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_conditions_p5".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_conditions_p6".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_conditions_p7".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_conditions_p8".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_conditions_p9".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_conditions_p10".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_conditions_p11".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_conditions_p12".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_conditions_p13".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_conditions_p14".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_conditions_p15".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_conditions_p16".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text(
+            "screen_info".tr,
+            textAlign: TextAlign.start,
+            style: TextStyle(fontSize: 20.sp, color: Colors.blue[700]),
+          ),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_screen_info1".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_screen_info2".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_screen_info3".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_screen_info4".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_screen_info5".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_screen_info6".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_screen_info7".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_screen_info8".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text(
+            "use_app_p1".tr,
+            textAlign: TextAlign.start,
+            style: TextStyle(fontSize: 20.sp, color: Colors.blue[700]),
+          ),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_use_app_p1".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text(
+            "use_app_p2".tr,
+            textAlign: TextAlign.start,
+            style: TextStyle(fontSize: 20.sp, color: Colors.blue[700]),
+          ),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_use_app_p2".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text(
+            "use_app_p3".tr,
+            textAlign: TextAlign.start,
+            style: TextStyle(fontSize: 20.sp, color: Colors.blue[700]),
+          ),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_use_app_p3".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text(
+            "use_app_p4".tr,
+            textAlign: TextAlign.start,
+            style: TextStyle(fontSize: 20.sp, color: Colors.blue[700]),
+          ),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_use_app_p4".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text(
+            "use_app_p5".tr,
+            textAlign: TextAlign.start,
+            style: TextStyle(fontSize: 20.sp, color: Colors.blue[700]),
+          ),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_use_app_p5".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text(
+            "use_app_p6".tr,
+            textAlign: TextAlign.start,
+            style: TextStyle(fontSize: 20.sp, color: Colors.blue[700]),
+          ),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_use_app_p6".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text(
+            "use_app_p7".tr,
+            textAlign: TextAlign.start,
+            style: TextStyle(fontSize: 20.sp, color: Colors.blue[700]),
+          ),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_use_app_p7".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text(
+            "use_app_p8".tr,
+            textAlign: TextAlign.start,
+            style: TextStyle(fontSize: 20.sp, color: Colors.blue[700]),
+          ),
+          SizedBox(
+            height: 20.h,
+          ),
+          Text("subtitle_use_app_p8".tr,
+              textAlign: TextAlign.start,
+              style: TextStyle(fontSize: 15.sp, color: Colors.blueGrey[900])),
+          SizedBox(
+            height: 20.h,
           ),
         ],
       ),

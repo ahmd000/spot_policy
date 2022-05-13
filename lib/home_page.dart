@@ -22,8 +22,51 @@ class _HomePageState extends State<HomePage> {
           SizedBox(
             height: 20.h,
           ),
+
+
+
+          Container(
+            padding: EdgeInsets.all(10.sp),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15.sp) ,
+
+              border: Border.all(
+                color: Colors.blueGrey,
+                width: 5.sp
+              )
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+
+              children: [
+              Image.asset("assets/images/logo2.png" ,
+              width: 100.sp , height: 100.sp,) ,
+              Column(
+                children: [
+                  Text(
+                    "appName".tr ,
+                    style: TextStyle(
+                      color: Colors.blue[700],fontSize: 30.sp
+                    ),
+                  ),   SizedBox(height: 20.sp,), Text(
+                    "privacy".tr ,
+                    style: TextStyle(
+                      color: Colors.blue[700],fontSize: 20.sp
+                    ),
+                  ),
+                ],
+              )
+            ],),
+          ),
+
+
+
+          SizedBox(height: 30.sp,),
+
+
+
           Text(
-            "privacy_p1".tr,
+            "appName".tr,
             textAlign: TextAlign.start,
 
             style: TextStyle(fontSize: 20.sp, color: Colors.blue[700]),

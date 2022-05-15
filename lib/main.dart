@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         builder: (context) {
           return GetMaterialApp(
               debugShowCheckedModeBanner: false,
-              locale: Get.deviceLocale,
+              locale: const Locale('en'),
               translations: LocalizaApp(),
               // localizationsDelegates: context.localizationDelegates,
               // supportedLocales: context.supportedLocales,
